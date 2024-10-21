@@ -81,10 +81,12 @@ These metrics help to analyze the performance of the object detection model acro
 ## Modal Deployment
 To deploy the scripts to modal, run the follow commands:
 * Deploying script for inference on COCO Validation Dataset
+
 ```bash
 modal deploy coco_val_inference.py
 
 * Deploying script for inference on a single image
+
 ```bash
 modal deploy single_image_inference.py
 ```
