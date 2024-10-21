@@ -1,6 +1,13 @@
 # modal_object_detection
 This repo provides script for running modal applications that employ object detection algorithms for inference. This repo investigates the DETA model and evaluates it upon the standard metrics: Average Precision (AP), AP Across Scales, Average Recall (AR), and AR Across Scales. 
 
+## Installation
+Before running the inference scripts, make sure you have the required dependencies installed. You can install them using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Running Inference on COCO Validation Dataset
 To run inference on the COCO validation dataset which consists of 5000 images, run the following command:
 
@@ -60,4 +67,14 @@ modal volume get single_image_object_detection_results single_image_object_detec
 ```bash
 modal volume get single_image_object_detection_results single_image_object_detection.png ./single_image_object_detection.png
 ```
+
+## Metrics and Evaluation
+The model is evaluated using the following metrics:
+
+* Average Precision (AP)
+* AP Across Scales (small, medium, large objects)
+* Average Recall (AR)
+* AR Across Scales
+
+These metrics help to analyze the performance of the object detection model across varying object sizes and conditions.
 
