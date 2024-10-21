@@ -1,14 +1,15 @@
 # modal_object_detection
 This repo provides script for running modal applications that employ object detection algorithms for inference. This repo investigates the DETA model and evaluates it upon the standard metrics: Average Precision (AP), AP Across Scales, Average Recall (AR), and AR Across Scales. 
 
+## Running Inference on COCO Validation Dataset
 To run inference on the COCO validation dataset which consists of 5000 images, run the following command:
 
 python coco_val_inference.py
 
-By default, the inference time will be included in the evaluation results. 
-To turn off inference time calculation, add the following argument like so:
+### Additional Options
+* Turn off inference time calculation:
 
-python coco_val_inference.py --get_inference_time=False
+'''python coco_val_inference.py --get_inference_time=False'''
 
 To download the evaluation results file to your local directory, run the following command
 modal volume get object_detection_results evaluation_results.json ./evaluation_results.json
