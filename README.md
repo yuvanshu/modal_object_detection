@@ -78,3 +78,25 @@ The model is evaluated using the following metrics:
 
 These metrics help to analyze the performance of the object detection model across varying object sizes and conditions.
 
+## Modal Deployment
+To deploy the scripts to modal, run the follow commands:
+* Deploying script for inference on COCO Validation Dataset
+```bash
+modal deploy coco_val_inference.py
+
+* Deploying script for inference on a single image
+```bash
+modal deploy single_image_inference.py
+```
+
+## References
+* https://medium.com/@yogendramanawat/deploy-your-genai-app-and-ml-models-on-modal-serverless-deployment-b022fa52f5f0
+
+* https://github.com/NielsRogge/Transformers-Tutorials/blob/master/DETR/Evaluating_DETR_on_COCO_validation_2017.ipynb
+
+* https://modal.com/docs
+
+* https://cocodataset.org/#download
+
+* https://huggingface.co/spaces/hf-vision/object_detection_leaderboard
+
