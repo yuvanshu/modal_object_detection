@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from transformers import DetaForObjectDetection, DetaImageProcessor
 from PIL import Image
 
+# Setting up the modal container
 gpu_image = (
     modal.Image.debian_slim()
     .apt_install("git", "curl")  # Install any additional system dependencies

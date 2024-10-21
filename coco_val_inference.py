@@ -10,6 +10,7 @@ from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 from PIL import Image
 
+# Setting up the modal container
 gpu_image = (
     modal.Image.debian_slim()
     .apt_install("git", "curl")  # Install any additional system dependencies
@@ -62,8 +63,6 @@ def run_inference(coco_gt, image_ids, img_dir, model, processor, device):
 
         target_sizes = torch.tensor(image.size[::-1]).unsqueeze(0).to(device)
         results = processor.post_process_object_detection(outputs, threshold=0, target_sizes=target_sizes)[0]
-
-        # plot_results(image, results['scores'], results['labels'], results['boxes'])
 
         for i in range(len(results['scores'])):
             box = results['boxes'][i]
